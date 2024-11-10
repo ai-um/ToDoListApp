@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    --main-bg-color: #292832;
+    --main-accent-color: #7E41EA;
+    --main-orange-color: #E55A3C;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+.round {
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+  
+.round.business {
+    border-color: var(--main-accent-color);
+}
+
+.round.personal {
+    border-color: var(--main-orange-color);
+}
+
+.round:after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 5px;
+    left: 5px;
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    transform: rotate(-45deg);
+    width: 10px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    width: 80%;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 30px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+h4 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 25px 0;
+
+}
+
+.task>span {
+    padding-left: 10px;
+}
+
+.task.completed {
+    text-decoration: line-through;
+}
+
+.task.completed .round {
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.task.completed .round:after {
+    opacity: 1;
+}
+
+.add-task {
+    position: fixed;
+    bottom: 20px;
+    left: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 100px auto 0;
+}
+
+input {
+    width: 70%;
+    border-radius: 30px;
+    padding: 14px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+}
+
+button {
+    background-color: var(--main-accent-color);
+    font-size: 34px;
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+}
+
+select {
+    border-radius: 30px;
+    padding: 14px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+}

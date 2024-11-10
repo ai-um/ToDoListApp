@@ -1,0 +1,61 @@
+Вот ещё полезная ссылка: https://vueframework.com/docs/v3/ru/ru/guide/introduction.html#начало-работы
+
+https://cli.vuejs.org/ru/guide/installation.html
+npm install -g @vue/cli
+vue --version
+
+Открываем терминал от админа.
+Пишем и запускаем: Set-ExecutionPolicy RemoteSigned
+На вопрос отвечаем: A (Да для всех)
+
+vue create todo-list-app
+cd todo-list-app
+
+Открываем проект в VScode и там в Терминале:
+npm run serve
+
+Если ошибка: Conflict: Multiple assets emit different content to the same filename index.html ERROR in Conflict: Multiple assets emit different content to the same filename index.html
+То: в пути к папке не должно быть пробелов.
+
+Должно высветиться
+App running at:
+  - Local:   http://localhost:8080/
+  - Network: http://192.168.0.12:8080/
+
+  Note that the development build is not optimized.
+  To create a production build, run npm run build.
+
+  Добавляем SASS (если хотим)
+  npm install -D sass-loader sass
+  npm i -D sass-loader
+
+  и LESS:
+  npm install -D less-loader less
+
+Примечание при использовании webpack 4
+    При использовании webpack версии 4, по умолчанию во Vue CLI 4, следует убедиться в совместимости используемых загрузчиков. В противном случае будут появляться ошибки о конфликтующих зависимостях. В таких случаях можно использовать более старую версию загрузчика, которая всё ещё совместима с webpack 4.
+
+    # Sass
+    npm install -D sass-loader@^10 sass
+
+
+Создаём файл style.css в папке src/assets
+В src/main.js пишем:
+    import '.assets/style.css'
+Таким образом, мы подключили файл стилей.
+
+
+Дальше смотрим на app.vue
+
+
+Убрали HelloWorld.
+Скопировали частично код отсюда https://codepen.io/sandbox/pen/BJbJaJ
+
+Дальше, меняем CSS.
+
+Про for ()отрисовка список) смотрим здесь:
+  https://vueframework.com/docs/v3/ru/ru/guide/list.html
+
+Генерация айдишника:
+  https://yandex.ru/search/?text=generate+random+string+js+built-in&lr=193&clid=2270455&win=623
+  
